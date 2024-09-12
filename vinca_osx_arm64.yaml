@@ -13,26 +13,33 @@ skip_all_deps: false
 
 # If full rebuild, the build number of the existing package has
 # to match the selected build number for skipping
-full_rebuild: true
+full_rebuild: false
 
 packages_skip_by_deps:
   - cartographer
-  - octomap
+  - pcl_conversions
+  - pendulum_control
+  - rttest
+  - tlsf
+  - tlsf_cpp
 
 packages_remove_from_deps:
   - cartographer
-  - octomap
-  - warehouse_ros_mongo
+  - pcl_conversions
+  - pendulum_control
+  - rttest
+  - tlsf
+  - tlsf_cpp
 
-skip_existing:
-  - https://conda.anaconda.org/robostack-jazzy/
+# skip_existing:
+#   - output
+#   - https://conda.anaconda.org/robostack-jazzy/
 
 packages_select_by_deps:
+  - ament_cmake_core
   - ros_workspace
   - ros_environment
   - ros_base
-  # - desktop
-
+  - desktop
 
 patch_dir: patch
-

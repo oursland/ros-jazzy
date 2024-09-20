@@ -13,7 +13,7 @@ skip_all_deps: false
 
 # If full rebuild, the build number of the existing package has
 # to match the selected build number for skipping
-full_rebuild: true
+full_rebuild: false
 
 packages_skip_by_deps:
   - cartographer
@@ -31,14 +31,17 @@ packages_remove_from_deps:
   - tlsf
   - tlsf_cpp
 
-skip_existing:
-  - https://conda.anaconda.org/robostack-jazzy/
+# skip_existing:
+#   - output
+#   - https://conda.anaconda.org/robostack-jazzy/
 
 packages_select_by_deps:
-  - ament_cmake_core
+  # - ros2bag
+  # - ament_cmake_core
   - ros_workspace
   - ros_environment
-  - ros_base
-  - desktop
+  - rclpy
+  # - ros_base
+  # - desktop
 
 patch_dir: patch

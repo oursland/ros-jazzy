@@ -172,3 +172,9 @@ gz_math_vendor:
   add_build: ["vcstool"]
 gz_utils_vendor:
   add_build: ["vcstool"]
+gz_common_vendor:
+  add_host: ["glib"]
+gz_sim_vendor:
+  add_host: ["ffmpeg"]
+gz_dartsim_vendor:
+  add_host: ["ipopt", "nlopt", "pagmo"]
